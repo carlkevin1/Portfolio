@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        
+        <div class="wrapper">
+            <section id="home" class="section">
+
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-c"></i>
+                   
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#skill">Skill</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="./carl.jpg" alt="profile pic">
+                </div>
+            
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Carl Kevin E. Peñera</h1>
+                    <p>Passionate and detail-oriented Front-End Developer with expertise in HTML, CSS, JavaScript </p>
+                    <div class="btn-group">
+                        <a href="CarlkevinE.Peñeraesume.pdf" class="btn active" download>Download CV</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://facebook.com/carlkevinemaas.penera.7" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://github.com/in/yourprofile" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://instagram.com/carlkevinck24" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="skill" class="section1">
+    <div class="skills-content">
+        <h1>Skills Section</h1>
+
+        <div class="skill">
+            <h2>HTML</h2>
+            <div class="skill-bar">
+                <div class="skill-level html"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h2>CSS</h2>
+            <div class="skill-bar">
+                <div class="skill-level css"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h2>JavaScript</h2>
+            <div class="skill-bar">
+                <div class="skill-level js"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="education-content">
+        <h1>Educational Background</h1>
+        <p>Degree: Bachelor of Science in Computer Science</p>
+        <p>Institution: Example University</p>
+        <p>Year: 2020</p>
+    </div>
+</section>
+
+    <section id="resume" class="section2">
+        <h1>Resume Section</h1>
+        <p>Content for resume section...</p>
+    </section>
+
+    <section id="contact" class="section3">
+        <h1>Contact Section</h1>
+        <p>Content for contact section...</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        // Toggle navigation menu for mobile
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.navlinks a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Typed effect for the profession name
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "UX Designer", "Web Developer"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
